@@ -130,3 +130,4 @@ print(s.center(10,'-')) #다른 문자들 사이에 가운데로
 python = '파이썬'
 java = '자바'
 print(python+''+java)
+print
