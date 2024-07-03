@@ -129,5 +129,10 @@ print(s.center(10,'-')) #다른 문자들 사이에 가운데로
 #문자열 출력
 python = '파이썬'
 java = '자바'
-print(python+''+java)
-print
+print(python+' '+java)#둘다 출력
+print(python,java)#또는
+print('개발 언어에는 '+python+','+java+' 등이 있어요')
+print('개발 언어에는',python,',',java,'등이 있어요')
+#문자열 포멧
+print('개발 언어에는 {},{} 등이 있어요'.format(python,java))
+print('개발 언어에는 {0},{1} 등이 있어요'.format(python,java))
