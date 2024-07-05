@@ -107,7 +107,6 @@ snack = '''꿀꽈배기는
 print(len(snack))
 
 #메소드
-
 letter = 'how are YOU?'
 print(letter.lower()) #모든 문자를 소문자로
 print(letter.upper()) #모든 문자를 대문자로
@@ -133,7 +132,76 @@ print(python+' '+java)#둘다 출력
 print(python,java)#또는
 print('개발 언어에는 '+python+','+java+' 등이 있어요')
 print('개발 언어에는',python,',',java,'등이 있어요')
+
 #문자열 포멧
 print('개발 언어에는 {},{} 등이 있어요'.format(python,java))
 print('개발 언어에는 {0},{1} 등이 있어요'.format(python,java))
 print(f'개발 언어에는 {python},{java} 등이 있어요')
+
+#탈출 문자 *큰 따옴표는 \'', 작은 따옴표는 \', 역슬래시는 \\, 줄바꿈은 \n
+print('하지만\'나만 당할 순없지\'라는 생각에\"엄청쉽지\"라고 했다.')
+print('C:\\Users\\Nadocoding')
+snack = '꿀꽈배기는\n너무\n맛있어요'
+print(snack)
+
+#리스트
+my_list = ['오예스','몽쉘','초코파이','초코파이','초코파이'] #중복 허용
+your_list = [1,2,3.14,True,False,'아무거나']
+empty_lsit = []
+print(my_list[0])
+print(my_list[0:2])
+print('몽쉘'in my_list)
+print(len(my_list))
+my_list[1] = '몽쉘카카오'
+print(my_list)
+my_list.append('빅파이')
+print(my_list)
+my_list.remove('오예스')
+print(my_list)
+my_list.extend(your_list)
+print(my_list)
+#insert() 원하는 위치에 값 추가
+#pop() 원하는 위치(또는 마지막)의 값 삭제
+#clear() 모든 값 삭제
+#sort() 값 순서대로 정렬
+#reverse() 순서 뒤집기
+#copy() 리스트 복사
+#count() 어떤 값이 몇 개 있는지
+#index() 어떤 값이 어디에 있는지
+
+#튜플 패킹
+my_tuple = ('오예스','몽쉘','초코파이','초코파이') #중복 허용
+your_tuple = (1,2,3.14,True,False,'아무거나')
+print(my_tuple[0])
+print(my_tuple[0:2])
+print('몽쉘'in my_tuple)
+print(len(my_tuple))
+#conut() 어떤 값이 몇 개 있는지
+#index() 어떤 값이 어디에 있는지
+#튜플 언패킹
+numbers = (1,2,3,4,5,6,7,8,9,10)
+(one,two,*others) = numbers #*은 리스트의 형태로 저장
+(*others,nine,ten) = numbers
+(one,*others,ten) = numbers
+
+#세트 (중복X,순서X)
+A = {'돈가스','보쌈','제육덮밥'}
+B = {'짬뽕','초밥','제육덮밥'}
+print(A.intersection(B)) #교집합
+print(A.union(B)) #합집합
+print(A.difference(B)) #차집합
+my_set = {'돈가스','보쌈','제육덮밥'}
+my_set.add('닭갈비') #값 추가
+print(my_set)
+my_set.remove('제육덮밥') #값 지우기
+print(my_set)
+my_set.clear() #모든 값 지우기
+print(my_set)
+del my_set #완전 삭제
+#copy() 값 복사
+#discard() 값 삭제(해당 값이 없어도 에러 발생X)
+#isdisjoint() 다른 세트의 부분집합인지 여부
+#issuperset() 다른 세트의 상위집합인지 여부
+#update() 다른 세트의 값들을 더함
+
+#딕셔너리
