@@ -204,4 +204,81 @@ del my_set #완전 삭제
 #issuperset() 다른 세트의 상위집합인지 여부
 #update() 다른 세트의 값들을 더함
 
-#딕셔너리
+#딕셔너리 (key,value) 예)사전
+person = {
+    '이름':'나귀욤',
+    '나이':7,
+    '키':120,
+    '몸무게':23
+    }
+print(person['이름'])
+print(person['나이'])
+print(person.get('별명'))
+person['최종학력'] = '유치원' #새로 추가
+person['키'] = 130 #수정
+person.update({'키':130,'몸무게':26}) #여러 값을 수정
+person.pop('몸무게') #값을 제거
+person.clear() #모든 값을 제거
+print(person.keys())
+print(person.values())
+print(person.items())
+#fromkeys() 제공된 keys 를 통해 새로운 딕셔너리 생성 및 변환
+#popitem() 마지막으로 추가된 데이터 삭제
+#setdefault key 에 해당하는 value 반환, key 가 없다면 새로 만들고 default value 설정 및 반환
+
+#총 정리          리스트         튜플           세트          딕셔너리
+'''선언      lst = []          t = ()          s = {}     d = {key:val}
+순서 보장           O            O               X               O
+중복허용            O            O               X               X (key)
+    접근        lst[idx]       t{idx}            X            d[key], d.get(key)
+    수정            O            X               X            0 (value)
+    추가         append()        X             add()         d[key] = val
+                 insert()                     update()       update()
+                 extend()    
+    삭제         remvoe()        X            remove()        pop()
+                  pop()                       discard()      popitem()
+                  clear()                      pop()         clear()
+                                               clear()'''
+#여러 값들을 순서대로 관리해야 할때는 리스트
+#값이 바뀔 일이 없거나, 바뀌면 안되면 튜플
+#값의 존재 여부가 중요하거나 중복이 안될때는 세트
+#key를 통해 효율적으로 데이터를 관리 하고싶을땐 딕셔너리
+
+#튜플을 수정하는 방법
+my_tuple = ('오예스','몽쉘')
+my_list = list(my_tuple)
+my_list.append('초코파이')
+my_tuple = tuple(my_list)
+
+#리스트의 중복을 제거하는 방법
+my_list = ['오예스','몽쉘','초코파이','초코파이','초코파이']
+my_set = set(my_list)
+my_list = list(my_set) #세트는 순서가 보장되지 않기 때문에 순서가 중요하지 않은 곳에만 쓰기
+my_list = ['오예스','몽쉘','초코파이','초코파이','초코파이']
+my_dic = dict.fromkeys(my_list) #딕셔너리는 순서를 보장
+print(my_dic)
+my_list = list(my_dic)
+print(my_list)
+
+#if 만약 ~ 라면
+today = '일요일'
+if today == '일요일':
+    print('게임 한 판')
+print('공부 시작')
+today = '화요일'
+if today == '일요일':
+    print('게임 한 판')
+print('공부 시작')
+today = '일요일'
+if today == '일요일':
+    print('게임 한 판')
+else:
+    print('폰 5분만')
+print('공부 시작')
+today = '화요일'
+if today == '일요일':
+    print('게임 한 판')
+else:
+    print('폰 5분만')
+print('공부 시작')
+#if(만약 ~ 라면), else(그렇지 않다면)
