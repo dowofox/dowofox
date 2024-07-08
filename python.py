@@ -282,3 +282,30 @@ else:
     print('폰 5분만')
 print('공부 시작')
 #if(만약 ~ 라면), else(그렇지 않다면)
+
+#elif 는 if 와 else 사이에 얼마든지 추가 가능
+if today == '일요일':
+    print('게임 한 판')
+elif today == '토요일':
+    print('폰 5분만')
+else:
+    print("물 한 잔")
+print('공부 시작')
+
+#if 중첩
+yellow_card = 0
+foul = False 
+if foul:
+    yellow_card+=1
+    if yellow_card == 2:
+        print('경고 누적 퇴장')
+    else:
+        print('휴..조심해야지')
+else:
+    print('주의')
+
+#for 반복문
+for x in range(10):
+    print('팔 벌려 뛰기 해')
+for x in range(10):
+    print(f'팔 벌려 뛰기 {x}회')
