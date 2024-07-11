@@ -306,6 +306,64 @@ else:
 
 #for 반복문
 for x in range(10):
-    print('팔 벌려 뛰기 해')
+    print('팔 벌려 뛰기 해') 
 for x in range(10):
     print(f'팔 벌려 뛰기 {x}회')
+#range(start,stop,step) start 이상 stop 미만 step 만큼 증가
+for x in range(1,10,2):
+    print(x) 
+my_list = [1,2,3]
+for x in my_list:
+    print(x)
+my_tuple = (1,2,3)
+for x in my_tuple:
+    print(x)
+person = {'이름':'나귀욤','나이':7,'키':120,'몸무게':23}
+for v in person.values():
+    print(v)
+person = {'이름':'나귀욤','나이':7,'키':120,'몸무게':23}
+for k in person.keys():
+    print(k)
+person = {'이름':'나귀욤','나이':7,'키':120,'몸무게':23}
+for k,v in person.items():
+    print(k,v)
+fruit = 'apple'
+for x in fruit:
+    print(x)
+
+#while (~하는 동안)
+max = 25 #최대 허용 무게
+weight = 0 #현재 캐리어 무게
+item = 3 #각 짐의 무게
+
+while weight + item <=max: #캐리어에 짐을 더 넣어도 되는지 확인
+    weight += item
+    print('짐을 추가합니다')
+print(f'총 무게는 {weight}입니다')
+
+#break
+drama = ['시즌1','시즌2','시즌3','시즌4','시즌5']
+for x in drama:
+    if x == '시즌3':
+        print('재미 없대, 그만 보자')
+        break
+    print(f'{x}시청')
+
+#continue
+['시즌1','시즌2','시즌3','시즌4','시즌5']
+for x in drama:
+    if x == '시즌3':
+        print('재미 없대, 건너뛰자')
+        continue
+    print(f'{x}시청')
+
+#들여쓰기 indent
+'''
+if 조건문:
+for 반복문:
+while 반복문:
+def 함수:
+try 예외:
+class 클래스:
+스페이스 4칸
+'''
