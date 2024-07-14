@@ -367,3 +367,33 @@ try 예외:
 class 클래스:
 스페이스 4칸
 '''
+
+#List Comprechension
+products = ['JOA-2020','JOA-2021','SIRO-2021','SIRO-2022']
+recall = [] #리콜 대상 제품 리스트
+for p in products:
+    if p.startswith('SIRO'): #제품명이 SIRO로 시작하는가
+        recall.append(p)
+print(recall)
+#간략화
+recall = [p for p in products if p.startswith('SIRO')]
+print(recall)
+
+my_list = [1,2,3,4,5]
+new_list = [x for x in my_list if x>3]
+"""
+(1) my_list 에서
+(2) 3보다 큰 값들만
+(3) 그대로 사용해서
+(4) 새로운 리스트로 만들어 줘
+"""
+
+#모든 모델명 뒤에 SE (special Edition)을 붙여줘
+prod_se = [p+'SE' for p in products]
+print(prod_se)
+#모든 모델명을 소문자로 바꿔줘
+prod_lower = [p.lower() for p in products]
+print(prod_lower)
+#22년 제품만 뽑는데 뒤에 (최신형) 이라는 글자를 붙여줘
+prod_new = [p+'(최신형)' for p in products if p.endswith('2022')]
+print(prod_new)
