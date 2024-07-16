@@ -397,3 +397,5 @@ print(prod_lower)
 #22년 제품만 뽑는데 뒤에 (최신형) 이라는 글자를 붙여줘
 prod_new = [p+'(최신형)' for p in products if p.endswith('2022')]
 print(prod_new)
+
+#함수 
