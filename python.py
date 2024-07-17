@@ -398,4 +398,86 @@ print(prod_lower)
 prod_new = [p+'(최신형)' for p in products if p.endswith('2022')]
 print(prod_new)
 
-#함수 
+#함수
+def show_price(customer):
+    print(f'사랑하는 {customer} 고객님')
+    print('감성 커트 가격은 15000원 입니다')
+
+customer1 = '나장발'
+show_price(customer1)
+
+customer2 = '나수염'
+show_price(customer2)
+
+def get_price(is_vip=False,is_birthday=False,is_membership=False,card=False,review=False,first_time=False):
+    if is_vip == True:
+        return 10000
+    elif is_birthday == True:
+        return 10000
+    else:
+        return 15000
+
+price = get_price(True)
+print(f'커트 가격은 {price} 원입니다')
+price = get_price(review=True,is_birthday=True)
+print({price})
+
+def visit(today,*customers):
+    print(today)
+    for customer in customers:
+        print(customer)
+
+visit('2022년 6월 10일','나장발')
+
+def secret():
+    message = '이건 나만의 비밀'
+    print(message)
+
+message = '나는야 전역 변수'
+print(message)
+
+def no_secret():
+    global message
+    message = '오 진짜 전역 변수'
+
+no_secret()
+print(message)
+'''
+name = input('예약자분 성함이 어떻게 되나요?')
+print(name)
+num = int(input('총 몇 분이세요?'))
+if num>4:
+    print('죄송하지만 저희 식당은 최대 4분 까지만 예약 가능합니다')
+print(num)
+'''
+f = open('list.txt','w',encoding='utf8') #쓰기 모드로 파일 열기
+f.write('김xx\n')
+f.write('정xx\n')
+f.write('허xx\n')
+f.close()
+
+f = open('list.txt','r',encoding='utf8') #읽기 모드로 파일 열기
+contents = f.read()
+print(contents)
+f.close()
+
+f = open('list.txt','r',encoding='utf8') #한줄씩 읽기
+for line in f:
+    print(line, end='')
+f.close()
+
+#with
+
+with open('list.txt','w',encoding='utf8')as f:
+    f.write('김xx\n')
+    f.write('정xx\n')
+    f.write('허xx\n')
+
+with open('list.txt','r',encoding='utf8')as f:
+    contents = f.read()
+    print(contents)
+
+#class
+name = '까망이'
+resolution = 'FHD'
+price = 200000
