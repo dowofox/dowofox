@@ -522,4 +522,71 @@ b2 = TravelBlackBox('하양이',100000,64)
 b2.set_travel_mode(20)
 print(b2.name,b2.price)
 
+class AdvancedTravelBlackBox(TravelBlackBox):
+    def set_travel_mode(self,min):
+        print(str(min)+'분 동안 여행 모드 ON')
+        self.make()
+        self.send()
+        
+b1 = TravelBlackBox('까망이',200000,64)
+b1.set_travel_mode(20)
+b2 = AdvancedTravelBlackBox('하양이',100000,64)
+b2.set_travel_mode(15)
+'''
+#pass
+class BlackBox:
+    def __init__(self):
+        pass
+    def record(self):
+        pass
+    def stop(self):
+        pass
+    def format(self):
+        pass
+for i in range(10):
+    pass
+while True:
+    pass
+if 3<5:
+    pass
+def my_func():
+    pass 
+'''
 
+#예외 처리와 에러 (구글 참고 python exceptions)
+num1 = 3
+num2 = '0'
+try:
+    result = num1/num2
+    print(f'연산 결과는 {result}입니다')
+except ZeroDivisionError:
+    print('0 으로 나눌 수 없어요')
+except TypeError:
+    print('값의 형태가 이상해요')
+except Exception as err:
+    print('에러가 발생했어요',err)
+else:
+    print('정상 동작했어요')
+finally:
+    print('수행 종료')
+
+#모듈 (하나의 파이썬 파일 .py) (구글 참고 list of python modules)
+import nadocoding.goodjob as goodjob #모든 기능을 이용가능
+goodjob.say()
+
+from nadocoding.goodjob import say #필요한것들만 이용
+say()
+
+import random
+my_list = ['가위','바위','보']
+print(random.choice(my_list))
+
+import nadocoding.goodjob
+nadocoding.goodjob.say()
+
+from nadocoding import goodbye
+goodbye.bye()
+
+from nadocoding import goodbye,goodjob
+goodbye.bye()
+goodjob.say()
