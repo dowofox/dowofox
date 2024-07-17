@@ -481,3 +481,45 @@ with open('list.txt','r',encoding='utf8')as f:
 name = '까망이'
 resolution = 'FHD'
 price = 200000
+color = 'black'
+'''
+class BlackBox:
+    pass
+
+b1 = BlackBox()
+b1.name = '까망이'
+print(b1.name)
+print(isinstance(b1,BlackBox))
+
+b2 = BlackBox()
+print(b2.name)
+'''
+class BlackBox():
+    def __init__(self,name,price):
+        self.name = name #멤버 변수
+        self.price = price #멤버 변수
+class VideoMaker:
+    def make(self):
+        print('추억용 여행 영상 제작')
+class MailSender:
+    def send(self):
+        print('메일 발송')
+
+class TravelBlackBox(BlackBox,VideoMaker,MailSender):
+    def __init__(self,name,price,sd):
+        super().__init__(name,price)
+        self.sd = sd
+
+    def set_travel_mode(self,min):
+        print(f'{self.name} {min} 분 동안 여행 모드 ON')
+
+
+
+b1 = TravelBlackBox('까망이',200000,64)
+b1.make()
+b1.send()
+b2 = TravelBlackBox('하양이',100000,64)
+b2.set_travel_mode(20)
+print(b2.name,b2.price)
+
+
