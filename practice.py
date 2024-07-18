@@ -81,4 +81,57 @@ phone_number = "010-1111-2222"
 phone_number1 = phone_number.replace('-','')
 print(phone_number1)
 #27 (x)
-ur1 = "http"
+url = "http://sharebook.kr"
+url_split = url.split(".")
+print(url_split[-1])
+#28 (x)
+lang = 'python'
+lang = lang.replace('p','P')
+print(lang)
+#29
+string = 'abcdfe2a354a32a'
+string = string.replace('a','A')
+print(string)
+#30
+string='abcd'
+string = string.replace('b','B')
+print(string)
+#31
+a = "3"
+b = "4"
+print(a+b)
+#32
+print("Hi"*3)
+#33
+print("-"*80)
+#34
+t1 = 'python'
+t2 = 'java'
+t3 = t1+' '+t2+' '
+print(t3*4)
+#35
+name1 = '김민수'
+age1 = 10
+name2 = '이철희'
+age2 = 13
+print("이름: %s 나이: %d" % (name1,age1))
+print("이름: %s 나이: %d" % (name2,age2))
+#36
+print("이름: {} 나이: {}".format(name1,age1))
+print("이름: {} 나이: {}".format(name2,age2))
+#37
+print(f'이름: {name1} 나이: {age1}')
+print(f'이름: {name2} 나이: {age2}')
+#38
+삼성주식수 = "5,969,782,550"
+samsung = 삼성주식수.replace(",","")
+samsung1 = int(samsung)
+print(samsung1,type(samsung1))
+#39
+분기 = "2020/03(E) (IFRS연결)"
+print(분기[:7])
+#40
+data = "   삼성전자   "
+data1 = data.strip()
+print(data1)
+#41
