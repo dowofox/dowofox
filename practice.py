@@ -135,3 +135,83 @@ data = "   삼성전자   "
 data1 = data.strip()
 print(data1)
 #41
+ticker = "btc_krw"
+ticker = ticker.upper()
+print(ticker)
+#42
+ticker = "BTC_KRW"
+ticker = ticker.lower()
+print(ticker)
+#43
+문자열 = "hello"
+문자열 = 문자열.capitalize()
+print(문자열)
+#44
+file_name = "보고서.xlsx"
+file = file_name.endswith('xlsx')
+print(file)
+#45
+file_name = '보고서.xlsx'
+file = file_name.endswith(('xlsx','xls'))
+print(file)
+#46
+file_name = "2020_보고서.xlsx"
+print(file_name.startswith("2020"))
+#47
+a = "hello world"
+print(a.split())
+#48
+ticker = "btc_krw"
+print(ticker.split('_'))
+#49
+date = "2020-05-01"
+print(date.split("-"))
+#50
+data = "039490    "
+print(data.rstrip())
+#51
+movie_rank = ['닥터 스트레인지','스플릿','럭키']
+print(movie_rank)
+#52
+movie_rank.append('배트맨')
+print(movie_rank)
+#53
+movie_rank.insert(1,'슈퍼맨')
+print(movie_rank)
+#54
+movie_rank.remove('럭키')
+print(movie_rank)
+#55 (x)
+del movie_rank[2]
+del movie_rank[2]
+print(movie_rank)
+#56
+lang1 = ['C','C++','JAVA']
+lang2 = ['Python','Go','C#']
+langs = lang1+lang2
+print(langs)
+#57
+nums = [1,2,3,4,5,6,7]
+print('max:',max(nums))
+print('min:',min(nums))
+#58 (x)
+nums = [1,2,3,4,5]
+print(sum(nums))
+#59
+cook = ['피자','김밥','만두','양념치킨','족발','피자','김치만두','쫄면','소시지','라면','팥빙수','김치전']
+print(len(cook))
+#60
+nums = [1,2,3,4,5]
+average = sum(nums)/len(nums)
+print(average)
+#61
+price = ['20100728',100,130,140,150,160,170]
+print(price[1:])
+#62
+nums = [1,2,3,4,5,6,7,8,9,10]
+print(nums[::2])
+#63
+print(nums[1::2])
+#64
+nums = [1,2,3,4,5]
+print(nums[::-1])
