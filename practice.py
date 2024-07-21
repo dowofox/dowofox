@@ -212,6 +212,58 @@ nums = [1,2,3,4,5,6,7,8,9,10]
 print(nums[::2])
 #63
 print(nums[1::2])
-#64
+#64 (x)
 nums = [1,2,3,4,5]
 print(nums[::-1])
+#65 (x)
+interest = ['삼성전자','LG전자','Naver']
+print(interest[0],interest[2])
+#66 (x)
+interest = ['삼성전자','LG전자','Naver','SK하이닉스','미래에셋대우']
+print(" ".join(interest))
+#67
+print("/".join(interest))
+#68
+print('\n'.join(interest))
+#69
+string = "삼성전자/LG전자/Naver"
+interest = string.split('/')
+print(interest)
+#70 (x)
+data = [2,4,3,1,5,10,9]
+data.sort()
+print(data)
+#71
+my_variable = ()
+print(type(my_variable))
+#72
+movie_rank = ("닥터 스트레인지","스플릿","럭키")
+print(movie_rank)
+#73
+nums = (1)
+print(type(nums))
+#74
+t = (1,2,3)
+#t[0] = 'a'  #튜플은 원래 값을 바꿀수없다
+print(t)
+#75
+t = 1,2,3,4
+print(type(t))
+#76
+t = ('a','b','c')
+t = ('A','b','c')
+print(t)
+#77
+interest = ('삼성전자','LG전자','SK Hynix')
+data = list(interest)
+print(data,type(data))
+#78
+data1 = tuple(data)
+print(data1,type(data1))
+#79
+temp = ('apple','banana','cake')
+a,b,c = temp
+print(a,b,c)
+#80
+data = tuple(range(2,100,2))
+print(data)
