@@ -264,6 +264,7 @@ print(data1,type(data1))
 temp = ('apple','banana','cake')
 a,b,c = temp
 print(a,b,c)
-#80
+#80 (x)
 data = tuple(range(2,100,2))
 print(data)
+#81
